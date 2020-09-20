@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Days 'til Christmas</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jeff Dean">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>How Many Days Until Christmas?</h2>
+  <h4>The year of 2020 has been a <em>little</em> hard on most of us.</h4>
+
+<h4>As we get closer to the end of the year, we <strong>need</strong> to be reminded that better days are coming.</h4>
+
+<h4>Are you ready for <em>Christmas</em>?</h4>
+
+  
+</section>
+<section class='class' data-state='' id='id0'>
+  <h2>Let Me Count the Days</h2>
+  <h4>With our tool, we can automatically determine the number of days from a given date to the next Christmas</h4>
+
+<h4>This can be used to figure out how much time you have to get presents</h4>
+
+<h6>This is especially important because Amazon has a backlog on a number of products!</h6>
+
+  
+</section>
+<section class='class' data-state='' id='id1'>
+  <h2>The Magic Behind The Algorithm</h2>
+  <h4>No magic involved (although this is about Christmas)</h4>
+
+<h4>All you have to do is enter a date, say, today&#39;s date!</h4>
+
+<h6>R code</h6>
+
+<pre><code class="r">thisDate &lt;- today()
+Year &lt;- year(thisDate)
+</code></pre>
+
+<h5>Today is 2020-09-20</h5>
+
+<h4>Then we figure out the year, and add it to a year-month-day string for Christmas</h4>
+
+<h5>i.e. 2020-12-25.</h5>
+
+<h4>We subtract the date entered from Christmas day for that year, and voila!</h4>
+
+  
+</section>
+<section class='class' data-state='' id='id2'>
+  <h2>Why?</h2>
+  <h4>As we said, 2020 has been a rough year.</h4>
+
+<h5>Politics, COVID-19, wildfires, the economy, ...</h5>
+
+<h4>We just thought you needed a reminder of the coming holiday season</h4>
+
+  
+</section>
+<section class='class' data-state='' id='id3'>
+  <h2>Don&#39;t forget the holiday wine!</h2>
+  <p><img src="./assets/img/center.jpg" alt="wreath"></p>
+
+  
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
